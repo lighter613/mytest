@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace 对应接口的全路径,表示对那个接口进行映射-->
+<mapper namespace="com.com.com.lightlck.dao.IUserDao">
+    <!--select 对应查询操作
+        id 对应namespace 中接口的方法名称
+        resultType 表示接口方法返回值类型
+                    如果结构返回的是集合类型,只需要指定集合中元素的类型即可-->
+    <select id="findAll" resultType="com.com.com.lightlck.entity.User">
+        select * from user;
+    </select>
+</mapper>
